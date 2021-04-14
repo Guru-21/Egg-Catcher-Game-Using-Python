@@ -3,10 +3,10 @@ from random import randrange
 from tkinter import Tk , Canvas , messagebox , font
 
 
-canvas_width = 1000
-canvas_height = 500
+canvas_width = 1000   # width of the canvas creating
+canvas_height = 500  # height of the canvas creating
 
-win = Tk()
+win = Tk()    # tkinter windows open
 c = Canvas(win, width = canvas_width , height = canvas_height, background = "deep sky blue")   # game background
 c.create_rectangle(-5, canvas_height - 100,canvas_width +5, canvas_height+5, fill = "brown", width = 0)  
 c.create_oval(-80,-80,120,120,fill = "yellow" , width = 0) #egg background
@@ -18,7 +18,7 @@ egg_height = 55
 egg_score = 10
 egg_speed = 500
 egg_interval = 5000
-difficulty_factor = 0.95
+difficulty_factor = 0.95  
 
 
 catcher = "blue"
@@ -108,7 +108,7 @@ c.focus_set()
 win.after(1000,creat_eggs)
 win.after(1000,move_eggs)
 win.after(1000,catch_check)
+                                   
 
 
-
-win.mainloop()
+win.mainloop()    # tkinter windows closed
